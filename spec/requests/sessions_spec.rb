@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 RSpec.describe 'Sessions' do
   describe 'GET /' do
     subject(:call) { get '/' }
