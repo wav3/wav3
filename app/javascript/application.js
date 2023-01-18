@@ -1,4 +1,8 @@
-// Entry point for the build script in your package.json
+import { Application } from '@hotwired/stimulus';
 import '@hotwired/turbo-rails';
 import 'bootstrap/dist/js/bootstrap.esm';
-import './controllers';
+
+const application = Application.start();
+
+application.debug = false;
+window.Stimulus = application;
