@@ -1,9 +1,12 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /config/master.key
+/coverage/*
+!/coverage/.last_run.json
 /db/*.sqlite3
 /log/
 /node_modules
 /public/assets
+/spec/examples.txt
 /storage/
 /tmp/
