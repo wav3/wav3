@@ -1,6 +1,5 @@
 {
-  "name": "app",
-  "private": "true",
+  "name": "wav3",
   "dependencies": {
     "@csstools/postcss-sass": "^5.0.1",
     "@hotwired/stimulus": "^3.2.1",
@@ -11,14 +10,14 @@
     "postcss-cli": "^10.1.0",
     "postcss-nesting": "^10.2.0"
   },
-  "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css"
-  },
   "devDependencies": {
     "eslint": "^8.32.0",
     "eslint-config-google": "^0.14.0",
     "stylelint": "^14.16.1",
     "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css"
   }
 }
