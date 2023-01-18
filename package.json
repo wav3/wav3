@@ -21,9 +21,9 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css",
-    "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "lint:css": "stylelint app/assets/stylesheets/**/*.scss",
-    "lint:js": "eslint"
+    "lint": "eslint",
+    "lint:css": "stylelint app/assets/stylesheets/**/*.scss"
   }
 }
