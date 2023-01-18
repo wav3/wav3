@@ -18,10 +18,10 @@ gem "puma", "~> 5.0"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire"s SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+# Hotwire"s modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
@@ -48,9 +48,12 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "haml"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -62,5 +65,15 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  gem "haml-lint", require: false
+  gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
 end
 
+group :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+end
