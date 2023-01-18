@@ -1,0 +1,56 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+  NewCops: enable
+Metrics/AbcSize:
+  CountRepeatedAttributes: false
+Metrics/BlockLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+  AllowedMethods:
+    - before
+    - class_methods
+    - configure
+    - context
+    - define
+    - describe
+    - factory
+    - group
+    - included
+    - it
+    - namespace
+    - prepended
+    - task
+    - trait
+Metrics/ClassLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+Metrics/ModuleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+    - heredoc
+Style/Documentation:
+  Enabled: false
+Style/ModuleFunction:
+  Enabled: false
