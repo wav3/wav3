@@ -17,6 +17,8 @@
   },
   "devDependencies": {
     "eslint": "^8.32.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard-scss": "^6.1.0"
   }
 }
