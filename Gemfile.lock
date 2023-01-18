@@ -263,9 +263,9 @@ DEPENDENCIES
   haml-lint
   jsbundling-rails
   propshaft
-  puma (~> 5.0)
-  rails (~> 7.0.4, >= 7.0.4.1)
-  redis (~> 4.0)
+  puma
+  rails
+  redis
   rspec-rails
   rubocop
   rubocop-performance
@@ -273,7 +273,7 @@ DEPENDENCIES
   rubocop-rspec
   shoulda-matchers
   simplecov
-  sqlite3 (~> 1.4)
+  sqlite3
   stimulus-rails
   turbo-rails
   web-console
