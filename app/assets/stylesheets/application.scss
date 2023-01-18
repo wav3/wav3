@@ -1,6 +1,5 @@
 @import "bootstrap/scss/mixins/banner";
 @include bsBanner("");
-
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/maps";
@@ -44,6 +43,7 @@ $alert-padding-y: 0.5rem;
 @import "bootstrap/scss/utilities/api";
 
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";
