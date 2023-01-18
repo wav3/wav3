@@ -1,7 +1,7 @@
 module.exports = {
-  plugins: [
-    require('postcss-nesting'),
-    require('autoprefixer'),
-    require('@csstools/postcss-sass')
-  ]
+  plugins: {
+    'postcss-nesting': {},
+    'autoprefixer': {},
+    '@csstools/postcss-sass': { includePaths: ['node_modules'] }
+  }
 }
