@@ -14,5 +14,9 @@
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
     "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
