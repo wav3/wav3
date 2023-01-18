@@ -6,6 +6,7 @@
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.2.4",
     "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.3",
     "esbuild": "^0.17.2",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
@@ -18,7 +19,9 @@
     "stylelint-config-standard-scss": "^6.1.0"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css"
+    "build:css": "postcss ./app/assets/stylesheets/*.scss --base ./app/assets/stylesheets --dir ./app/assets/builds --ext .css",
+    "build:js": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "lint:css": "stylelint app/assets/stylesheets/**/*.scss",
+    "lint:js": "eslint"
   }
 }
