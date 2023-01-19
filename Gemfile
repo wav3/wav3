@@ -15,6 +15,7 @@ gem 'redis'
 gem 'sqlite3'
 gem 'stimulus-rails'
 gem 'turbo-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'factory_bot_rails'
