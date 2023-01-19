@@ -11,6 +11,8 @@
     %header
       %nav.navbar.navbar-dark.bg-dark.border-bottom
         .container-fluid
-          = link_to 'WAV3', root_path, class: 'navbar-brand px-3'
+          = link_to root_path, class: 'navbar-brand px-2' do
+            %i.fa-solid.fa-wave-square.text-primary
+            WAV3
     %main
       = yield
