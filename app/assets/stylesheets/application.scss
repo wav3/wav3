@@ -1,5 +1,10 @@
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
-$alert-padding-y: 0.5rem;
+$primary: #a371f7;
+$secondary: #343a40;
+$body-color: #f8f9fa;
+$body-bg: #212529;
+$border-color: #495057;
+$font-family-base: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
