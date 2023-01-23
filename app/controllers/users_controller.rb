@@ -1,5 +1,6 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
 
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
@@ -14,13 +15,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def create
+  def login
     @user = User.find_by(email: params[:user][:email])
-    if @user && @user.authenticate(params[:user][:password])
+    if @user&.authenticate(params[:user][:password])
       session[:user_id] = @user.id
       show_welcome_page
     else
-      @errors = ["Please enter a valid email and password."]
+      @errors = ['Please enter a valid email and password.']
       render :new
     end
   end
