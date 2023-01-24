@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Sessions' do
+RSpec.describe 'Application' do
   describe 'GET /' do
     subject(:call) { get '/' }
 
