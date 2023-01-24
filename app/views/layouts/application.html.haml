@@ -14,5 +14,11 @@
           = link_to root_path, class: 'navbar-brand px-2' do
             %i.fa-solid.fa-wave-square.text-primary
             WAV3
+      #flash-container.container
+        - flash.each do |variant, content|
+          - variant = 'info' if variant.to_s == 'notice'
+          - variant = 'danger' if variant.to_s == 'alert'
+          = render layout: 'layouts/alert', locals: { variant: variant } do
+            = content
     %main
       = yield
