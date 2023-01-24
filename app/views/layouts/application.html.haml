@@ -18,7 +18,7 @@
         - flash.each do |variant, content|
           - variant = 'info' if variant.to_s == 'notice'
           - variant = 'danger' if variant.to_s == 'alert'
-          = render layout: 'layouts/alert', locals: { variant: variant } do
+          = render layout: 'layouts/alert', locals: { variant: } do
             = content
     %main
       = yield
