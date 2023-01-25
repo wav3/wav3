@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :user do
-    profile { association :user_profile, user: instance }
+    profile { build :user_profile, user: instance }
 
     sequence(:email) { |n| "user#{n}@email.com" }
     password { 'password' }
