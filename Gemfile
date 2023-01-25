@@ -35,5 +35,5 @@ group :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'simplecov'
-  gem 'webdrivers', '~> 4.0', require: false
+  gem 'webdrivers'
 end
