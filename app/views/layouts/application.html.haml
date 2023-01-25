@@ -18,7 +18,8 @@
         - flash.each do |variant, content|
           - variant = 'info' if variant.to_s == 'notice'
           - variant = 'danger' if variant.to_s == 'alert'
-          = render layout: 'layouts/alert', locals: { variant: } do
+          .alert.alert-dismissible.fade.show{ role: 'alert', class: "alert-#{variant}" }
             = content
+            = button_tag '', type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close'
     %main
       = yield
