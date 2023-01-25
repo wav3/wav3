@@ -6,6 +6,7 @@ ruby File.read(File.expand_path('.ruby-version', __dir__)).strip
 gem 'action_policy'
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'devise'
 gem 'haml'
 gem 'jsbundling-rails'
 gem 'propshaft'
