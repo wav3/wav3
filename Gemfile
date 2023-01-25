@@ -31,8 +31,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'webdrivers'
