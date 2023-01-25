@@ -19,6 +19,7 @@ gem 'turbo-rails'
 
 group :development, :test do
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -31,7 +32,8 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'capybara'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'webdrivers', '~> 4.0', require: false
 end
