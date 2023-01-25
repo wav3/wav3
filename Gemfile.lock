@@ -302,7 +302,7 @@ DEPENDENCIES
   haml
   haml-lint
   jsbundling-rails
-  pg (~> 1.1)
+  pg
   propshaft
   puma
   rails
