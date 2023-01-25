@@ -5,8 +5,19 @@ $body-color: #f8f9fa;
 $body-bg: #212529;
 $border-color: #495057;
 $font-family-base: "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+$alert-padding-y: 0.75rem;
 
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/regular";
 @import "@fortawesome/fontawesome-free/scss/solid";
 @import "bootstrap/scss/bootstrap";
+
+#flash-container .alert {
+  &:first-child {
+    margin-top: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
