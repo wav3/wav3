@@ -1,11 +1,12 @@
 # frozen_string_literal: true
-# spec/root_spec.rb
+
+# spec/application_spec.rb
 
 require 'rails_helper'
 
-RSpec.describe 'Root content' do
+RSpec.describe 'Application content' do
   it 'shows the app name' do
-    visit root_path
+    visit application_path
     expect(page).to have_content('WAV3')
   end
 end
