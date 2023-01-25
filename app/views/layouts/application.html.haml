@@ -9,11 +9,39 @@
     = javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true
   %body
     %header
-      %nav.navbar.navbar-dark.bg-dark.border-bottom
+      %nav.navbar.navbar-expand-sm.navbar-dark.bg-dark.border-bottom
         .container-fluid
           = link_to root_path, class: 'navbar-brand px-2' do
             %i.fa-solid.fa-wave-square.text-primary
             WAV3
+          = button_tag type: 'button',
+                       class: 'navbar-toggler',
+                       data: { 'bs-toggle': 'collapse', 'bs-target': '#navbar-content' },
+                       aria: { controls: 'navbar-content', expanded: 'false', label: 'Toggle navigation' } do
+            %span.navbar-toggler-icon
+          #navbar-content.collapse.navbar-collapse
+            %ul.navbar-nav.me-auto.mb-2.mb-sm-0
+              -# %li.nav-item= link_to 'Music', '#', class: 'nav-link'
+              -# %li.nav-item= link_to 'Market', '#', class: 'nav-link'
+              -# %li.nav-item= link_to 'Social', '#', class: 'nav-link'
+            %ul.navbar-nav
+              - if user_signed_in?
+                %li.nav-item.dropdown
+                  = link_to current_user.handle,
+                            '#',
+                            role: 'button',
+                            class: 'nav-link dropdown-toggle',
+                            'data-bs-toggle': 'dropdown',
+                            'aria-expanded': 'false'
+                  %ul.dropdown-menu.dropdown-menu-sm-end
+                    %li= link_to 'Profile', '#', class: 'dropdown-item'
+                    %li
+                      = link_to 'Sign Out',
+                                destroy_user_session_path,
+                                class: 'dropdown-item',
+                                'data-turbo-method': :delete
+              - else
+                %li.nav-item= link_to 'Sign In', new_user_session_path, class: 'nav-link'
       #flash-container.container
         - flash.each do |variant, content|
           - variant = 'info' if variant.to_s == 'notice'
