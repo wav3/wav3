@@ -5,8 +5,5 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  def root
-    flash.now[:danger] = 'DANGER'
-    flash.now[:warning] = 'DANGER'
-  end
+  def root; end
 end
