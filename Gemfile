@@ -14,7 +14,6 @@ gem 'propshaft'
 gem 'puma'
 gem 'rails'
 gem 'redis'
-gem 'rolify'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 
