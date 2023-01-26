@@ -1,0 +1,2 @@
+class FanClub < ApplicationRecord
+end
