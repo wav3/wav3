@@ -1,8 +1,0 @@
-:ruby
-  options = local_assigns.clone
-  variant = options.delete :variant
-  options[:class] = [options[:class], 'alert', "alert-#{variant}", 'alert-dismissible', 'fade', 'show'].flatten
-  options[:role] = 'alert'
-= tag.div(**options) do
-  = yield
-  = button_tag '', type: 'button', class: 'btn-close', 'data-bs-dismiss': 'alert', 'aria-label': 'Close'
