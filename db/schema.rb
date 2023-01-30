@@ -42,18 +42,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_205325) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "fan_clubs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "roles", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "resource_type"
     t.bigint "resource_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+    t.index ["name", "resource_id", "resource_type"], name: "index_roles_on_name_and_resource_id_and_resource_type", unique: true
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource"
   end
 
@@ -66,6 +61,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_205325) do
     t.index ["user_id"], name: "index_user_profiles_on_user_id", unique: true
   end
 
+  create_table "user_roles", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "role_id", null: false
+    t.index ["role_id"], name: "index_user_roles_on_role_id"
+    t.index ["user_id", "role_id"], name: "index_user_roles_on_user_id_and_role_id", unique: true
+    t.index ["user_id"], name: "index_user_roles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
@@ -74,15 +77,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_205325) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  create_table "users_roles", id: false, force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "role_id"
-    t.index ["role_id"], name: "index_users_roles_on_role_id"
-    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
-    t.index ["user_id"], name: "index_users_roles_on_user_id"
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "user_profiles", "users"
+  add_foreign_key "user_roles", "roles"
 end
